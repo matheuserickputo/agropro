@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
     <style>
         /* Estilos opcionais para o modal */
@@ -47,6 +45,9 @@
           cursor: pointer;
         }
       </style>
+
+</head>
+<body>
 
 
 
@@ -91,6 +92,41 @@
         <p> QUAIS MÉTODOS DE CONTROLE DE PRAGA VOCÊS UTILIZAM?</p>
         <p>Utilizamos métodos seguros e eficazes que incluem tratamentos químicos e biológicos</p>
     </section>
+
+<!-- Botão para abrir a caixa de informação -->
+<button onclick="abrirModal()">Abrir Caixa de Informação</button>
+
+<!-- O modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="fecharModal()">&times;</span>
+    <p>Aqui está a sua caixa de informação!</p>
+    <p>Você pode adicionar qualquer conteúdo aqui.</p>
+  </div>
+</div>
+
+<script>
+// Função para abrir o modal
+function abrirModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "block";
+}
+
+// Função para fechar o modal
+function fecharModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+}
+
+// Fechar o modal se o usuário clicar fora da caixa de informação
+window.onclick = function(event) {
+    var modal = document.getElementById("myModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
 
     <section id="blog">
         <h2>Blog</h2>
