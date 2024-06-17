@@ -88,47 +88,40 @@
     </section>
 
    <section>
-    <p>Perguntas frequentes e respostas sobre controle de pragas.</p>
+    <h1>Perguntas frequentes e respostas sobre controle de pragas</h1>
    </section>
-<button onclick="openModal('modal1')">Abrir Modal 1</button>
-<button onclick="openModal('modal2')">Abrir Modal 2</button>
+   <button onclick="abrirModal()">Abrir Caixa de Informação</button>
 
-<!-- Modais -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal1')">&times;</span>
-    <p>Conteúdo do Modal 1...</p>
-  </div>
-</div>
+   <!-- O modal -->
+   <div id="myModal" class="modal">
+     <div class="modal-content">
+       <span class="close" onclick="fecharModal()">&times;</span>
+       <p>Aqui está a sua caixa de informação!</p>
+       <p>Você pode adicionar qualquer conteúdo aqui.</p>
+     </div>
+   </div>
 
-<div id="modal2" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal('modal2')">&times;</span>
-    <p>Conteúdo do Modal 2...</p>
-  </div>
-</div>
-
-<script>
-// Funções JavaScript para abrir e fechar os modais
-function openModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = "block";
-  }
-
-  function closeModal(modalId) {
-    var modal = document.getElementById(modalId);
-    modal.style.display = "none";
-  }
-
-  // Fechar o modal clicando fora da área do conteúdo
-  window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-      event.target.style.display = "none";
+   <script>
+    // Função para abrir o modal
+    function abrirModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
     }
-   
+    
+    // Função para fechar o modal
+    function fecharModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
     }
-}
-</script>
+    
+    // Fechar o modal se o usuário clicar fora da caixa de informação
+    window.onclick = function(event) {
+        var modal = document.getElementById("myModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
 
 
     <section id="contact">
