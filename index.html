@@ -90,6 +90,8 @@
    <section>
     <h1>Perguntas frequentes e respostas sobre controle de pragas</h1>
    </section>
+
+   <button onclick="abrirModal2()">Abrir Outra Informação</button>
    <button onclick="abrirModal()">Abrir Caixa de Informação</button>
 
    <!-- O modal -->
@@ -100,26 +102,38 @@
        <p>Você pode adicionar qualquer conteúdo aqui.</p>
      </div>
    </div>
+   <!-- Segundo modal -->
+<div id="myModal2" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="fecharModal2()">&times;</span>
+      <p>Aqui está outra informação!</p>
+      <p>Você pode adicionar qualquer conteúdo aqui também.</p>
+    </div>
+  </div>
 
    <script>
-    // Função para abrir o modal
-    function abrirModal() {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "block";
+ // Função para abrir o segundo modal
+function abrirModal2() {
+    var modal = document.getElementById("myModal2");
+    modal.style.display = "block";
+}
+
+// Função para fechar o segundo modal
+function fecharModal2() {
+    var modal = document.getElementById("myModal2");
+    modal.style.display = "none";
+}
+
+// Fechar o segundo modal se o usuário clicar fora
+window.onclick = function(event) {
+    var modal1 = document.getElementById("myModal");
+    var modal2 = document.getElementById("myModal2");
+    if (event.target == modal1) {
+        modal1.style.display = "none";
     }
-    
-    // Função para fechar o modal
-    function fecharModal() {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none";
+    if (event.target == modal2) {
+        modal2.style.display = "none";
     }
-    
-    // Fechar o modal se o usuário clicar fora da caixa de informação
-    window.onclick = function(event) {
-        var modal = document.getElementById("myModal");
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
     }
     </script>
 
