@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* Estilos opcionais para o modal */
         .modal {
-          display: none; /* Começa oculto */
+          display: none;
           position: fixed;
           z-index: 1;
           left: 0;
@@ -17,7 +16,7 @@
           width: 100%;
           height: 100%;
           overflow: auto;
-          background-color: rgba(0,0,0,0.5); /* Fundo semi-transparente */
+          background-color: rgba(0,0,0,0.5);
         }
         
         .modal-content {
@@ -52,7 +51,6 @@
     <section id="home">
         <h1>Bem-vindo ao Controle de Pragas XYZ</h1>
         <p>Oferecemos soluções eficazes para manter sua casa livre de pragas indesejadas.</p>
-        <!-- Adicione mais informações sobre a empresa aqui -->
     </section>
    
 
@@ -62,22 +60,19 @@
             <li>Controle de Insetos</li>
             <li>Controle de Roedores</li>
             <li>Controle de Térmitas</li>
-            <!-- Adicione mais serviços conforme necessário -->
         </ul>
     </section>
 
     <section id="about">
         <h1>Sobre Nós e contato</h1>
         <p>Somos uma equipe dedicada a fornecer soluções eficazes de controle de pragas há mais de 10 anos.</p>
-        <!-- Adicione mais informações sobre a empresa aqui -->
     </section>
 
    <section>
     <h1>Perguntas frequentes e respostas sobre controle de pragas</h1>
    </section>
 
-   <button onclick="abrirModal()">Abrir Caixa de Informação</button>
-   <!-- O modal -->
+   <button onclick="abrirModal()">Abrir Perguntas e Respostas</button>
    <div id="myModal" class="modal">
      <div class="modal-content">
        <span class="close" onclick="fecharModal()">&times;</span>
@@ -93,19 +88,16 @@
    </div>
 
    <script>
- // Função para abrir o modal
  function abrirModal() {
         var modal = document.getElementById("myModal");
         modal.style.display = "block";
     }
     
-    // Função para fechar o modal
     function fecharModal() {
         var modal = document.getElementById("myModal");
         modal.style.display = "none";
     }
     
-    // Fechar o modal se o usuário clicar fora da caixa de informação
     window.onclick = function(event) {
         var modal = document.getElementById("myModal");
         if (event.target == modal) {
@@ -117,12 +109,10 @@
     <section id="contact">
         <h2>estações</h2>
         <p>Entre em contato conosco para agendar uma inspeção ou para mais informações.</p>
-        <!-- Adicione formulário de contato ou informações de contato aqui -->
     </section>
 
     <button onclick="abrirModal2()">Abrir Outra Informação</button>
     
-    <!-- Segundo modal -->
 <div id="myModal2" class="modal">
     <div class="modal-content">
       <span class="close" onclick="fecharModal2()">&times;</span>
@@ -132,19 +122,16 @@
   </div>
 
     <script>
-      // Função para abrir o segundo modal   
         function abrirModal2() {
     var modal = document.getElementById("myModal2");
     modal.style.display = "block";
 }
 
-// Função para fechar o segundo modal
 function fecharModal2() {
     var modal = document.getElementById("myModal2");
     modal.style.display = "none";
 }
 
-// Fechar o segundo modal se o usuário clicar fora
 window.onclick = function(event) {
     var modal1 = document.getElementById("myModal");
     var modal2 = document.getElementById("myModal2");
