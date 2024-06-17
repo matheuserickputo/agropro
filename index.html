@@ -87,7 +87,9 @@
         <!-- Adicione mais informações sobre a empresa aqui -->
     </section>
 
-   
+   <section>
+    <p>Perguntas frequentes e respostas sobre controle de pragas.</p>
+   </section>
 <button onclick="openModal('modal1')">Abrir Modal 1</button>
 <button onclick="openModal('modal2')">Abrir Modal 2</button>
 
@@ -107,24 +109,21 @@
 </div>
 
 <script>
-// Função para abrir o modal
-function abrirModal(idModal) {
-    var modal = document.getElementById("myModal");
+// Funções JavaScript para abrir e fechar os modais
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
     modal.style.display = "block";
-}
+  }
 
-// Função para fechar o modal
-function fecharModal(idModal) {
-    var modal = document.getElementById("myModal");
+  function closeModal(modalId) {
+    var modal = document.getElementById(modalId);
     modal.style.display = "none";
-}
+  }
 
-// Fechar o modal se o usuário clicar fora da caixa de informação
-window.onclick = function(event) {
-    var modal = document.getElementById("myModal");
-    for (var i = 0; i < modais.length;i++){ 
-        if (event.target == modais[i]) {
-        modais[i].style.display = "none";
+  // Fechar o modal clicando fora da área do conteúdo
+  window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+      event.target.style.display = "none";
     }
    
     }
