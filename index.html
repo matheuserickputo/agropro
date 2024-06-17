@@ -77,8 +77,6 @@
    </section>
 
    <button onclick="abrirModal()">Abrir Caixa de Informação</button>
-   <button onclick="abrirModal2()">Abrir Outra Informação</button>
-
    <!-- O modal -->
    <div id="myModal" class="modal">
      <div class="modal-content">
@@ -87,14 +85,6 @@
        <p>Você pode adicionar qualquer conteúdo aqui.</p>
      </div>
    </div>
-   <!-- Segundo modal -->
-<div id="myModal2" class="modal">
-    <div class="modal-content">
-      <span class="close" onclick="fecharModal2()">&times;</span>
-      <p>Aqui está outra informação!</p>
-      <p>Você pode adicionar qualquer conteúdo aqui também.</p>
-    </div>
-  </div>
 
    <script>
  // Função para abrir o modal
@@ -116,29 +106,6 @@
             modal.style.display = "none";
         }
     }
- // Função para abrir o segundo modal
-function abrirModal2() {
-    var modal = document.getElementById("myModal2");
-    modal.style.display = "block";
-}
-
-// Função para fechar o segundo modal
-function fecharModal2() {
-    var modal = document.getElementById("myModal2");
-    modal.style.display = "none";
-}
-
-// Fechar o segundo modal se o usuário clicar fora
-window.onclick = function(event) {
-    var modal1 = document.getElementById("myModal");
-    var modal2 = document.getElementById("myModal2");
-    if (event.target == modal1) {
-        modal1.style.display = "none";
-    }
-    if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
-    }
     </script>
 
     <section id="contact">
@@ -146,7 +113,7 @@ window.onclick = function(event) {
         <p>Entre em contato conosco para agendar uma inspeção ou para mais informações.</p>
         <!-- Adicione formulário de contato ou informações de contato aqui -->
     </section>
-    
+
     <button onclick="abrirModal2()">Abrir Outra Informação</button>
     
     <!-- Segundo modal -->
